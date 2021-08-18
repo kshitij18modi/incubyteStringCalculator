@@ -59,6 +59,9 @@ public class CalculatorTest {
     	assertEquals(3, Calculator.add("//;\n1;2"));
     }
 
-    
+    @Test
+    public void CallCount(){
+    	System.out.println("Add Function called:- "+Calculator.GetCallCount()+" times");
+    }
 
 }

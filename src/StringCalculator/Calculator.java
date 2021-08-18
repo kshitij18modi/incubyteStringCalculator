@@ -1,7 +1,7 @@
 package StringCalculator;
 
 public class Calculator {
-	
+	public static int counter =0;
 	//Add Function
 	public static int add(String text){
 		
@@ -18,6 +18,7 @@ public class Calculator {
 				text = text.substring(4);
 			}
 			String numList[] = splitNumbers(text, delimiter + "|\n");
+			counter++;
 			return sum(numList);
 		}
 	}
@@ -57,5 +58,8 @@ public class Calculator {
 			throw new IllegalArgumentException("Negatives not allowed: " + negativeString);
 		}
 		return total;
+	}
+	public static int GetCallCount() {
+		return counter;
 	}
 }
